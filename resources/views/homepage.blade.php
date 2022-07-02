@@ -174,7 +174,7 @@
                 </div>
             @empty
                 <div class=" container alert alert-danger w-25">
-                    {{ $message }}
+                    No Product Found !
                 </div>
             @endforelse
         </div>
