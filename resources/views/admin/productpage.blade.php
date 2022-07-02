@@ -101,7 +101,7 @@
                                             placeholder="price" required>
                                         <select class="form-select my-2 w-75" name="size" required>
                                             <option value="small">small</option>
-                                            <option value="meduim">meduim</option>
+                                            <option value="medium">medium</option>
                                             <option value="large">large</option>
                                             <option value="xlarge">xlarge</option>
                                             <option value="xxlarge">xxlarge</option>
