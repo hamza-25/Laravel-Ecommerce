@@ -40,7 +40,7 @@
                         <div class="col-md-6">
                             <div class="images p-3">
                                 <div class="text-center p-4"> <img id="main-image"
-                                        src="{{ 'https://m.media-amazon.com/images/I/612POrS7WnL._AC_UX425_.jpg' }}"
+                                        src="{{ $product->image}}"
                                         width="250" /> </div>
                             </div>
                         </div>
