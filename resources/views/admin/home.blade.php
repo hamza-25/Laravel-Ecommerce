@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="col py-3">
-                Content 
+                Content page
             </div>
         </div>
     </div>
