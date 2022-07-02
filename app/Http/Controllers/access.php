@@ -81,7 +81,7 @@ class access extends Controller
     ####
     public function clientOrder()
     {
-        $orders = order::where('user_id', Auth::user()->id)->paginate(15);
+        $orders = order::where('user_id', Auth::user()->id)->where("one_order",null)->paginate(15);
 
         // $one_order = oneOrder::where("user_id", Auth::user()->id)->paginate(7);
 
