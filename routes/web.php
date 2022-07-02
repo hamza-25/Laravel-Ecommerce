@@ -99,6 +99,7 @@ Route::group(['middleware' => ['auth', 'isAdmin']], function () {
 Route::get('productview/{productId}', [access::class, "productview"])->name('productview');
 Route::get('search', [searchController::class, "search"])->name("search");
 Route::post('filter', [searchController::class, "filter"])->name("filter");
+Route::get('edraak', [access::class, "edraak"])->name("edraak");
 
 
 
