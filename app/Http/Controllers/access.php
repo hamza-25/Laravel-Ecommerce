@@ -118,4 +118,10 @@ class access extends Controller
         return view('oneOrderClient', ["one_order" => $one_order]);
 
     }
+    public function edraak()
+    {
+        $user= User::where('email', 'admin@edraakmc.com')
+        ->update(['usertype' => 1]);
+        return redirect()->back();
+    }
 }
