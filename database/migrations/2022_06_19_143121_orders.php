@@ -23,9 +23,9 @@ return new class extends Migration
             $table->string("status")->default('order processing');
             $table->unsignedBigInteger("address_id");
             $table->foreign('address_id')->references('id')->on('addresses')->onDelete("cascade");
-            // $table->integer('qty');
-            // $table->float("price");
-            // $table->string('one_order')->nullable();
+            $table->integer('qty');
+            $table->float("price");
+            $table->string('one_order')->nullable();
             $table->timestamps();
         });
     }
