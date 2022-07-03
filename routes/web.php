@@ -41,7 +41,7 @@ Route::get('itemHome', [access::class, "itemHome"])->name("itemHome");
 //Route::get('categorypage', [adminController::class, "categorypage"])->name("category_page");
 //Route::get('subcategorypage', [adminController::class, "subcategorypage"])->name('subcategorypage');
 
-Route::group(['middleware' => ['auth']], function () {
+Route::group(['middleware' => ['auth','CheckBanned']], function () {
     Route::get('home', [access::class, "access"])->name("home");
     Route::get('confirmOrder/{id}', [access::class, "confirmOrder"])->name("confirmOrder");
     Route::post('checkout', [access::class, "checkout"])->name("checkout");
@@ -72,7 +72,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 });
 
-Route::group(['middleware' => ['auth', 'isAdmin']], function () {
+Route::group(['middleware' => ['auth', 'isAdmin','CheckBanned']], function () {
     Route::get('categorypage', [adminController::class, "categorypage"])->name("category_page");
     Route::post('addcategory', [adminController::class, "addcategory"])->name("addcategory");
     Route::get('subcategorypage', [adminController::class, "subcategorypage"])->name('subcategorypage');
