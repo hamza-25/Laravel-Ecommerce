@@ -95,6 +95,8 @@ Route::group(['middleware' => ['auth', 'isAdmin']], function () {
     Route::get('orderHasProduct', [adminController::class, "orderHasProduct"])->name('orderHasProduct');
     Route::get('showOrderHasProduct/{id}', [adminController::class, "showOrderHasProduct"])->name('showOrderHasProduct');
     Route::get('changestatusOneOrder/{id}/{status}', [adminController::class, "changestatusOneOrder"])->name('changestatusOneOrder');
+    Route::get('ban/{id}',[adminController::class,"banUser"])->name('ban-user');
+    Route::get('recovery/{id}',[adminController::class,"recoveryUser"])->name('recovery-user');
 });
 Route::get('productview/{productId}', [access::class, "productview"])->name('productview');
 Route::get('search', [searchController::class, "search"])->name("search");
