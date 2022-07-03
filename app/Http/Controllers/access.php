@@ -22,7 +22,8 @@ class access extends Controller
     {
         $usertype = Auth::user()->usertype;
         if ($usertype == "1") {
-            return view("admin.home");
+            $user= user::where("usertype",0)->paginate(10);
+            return view("admin.home",["user"=>$user]);
         } else {
             $categories = category::all();
             $products = product::paginate(15);
