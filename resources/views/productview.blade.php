@@ -58,7 +58,7 @@
                                 <h6 class="mt-4 mb-3"> <span
                                         class="text-uppercase text-dark brand">{{ $product->name }}</span>
                                     <div class="price d-flex flex-row align-items-center"> <span
-                                            class="act-price">${{ $product->price }}</span>
+                                            class="act-price mt-2">${{ $product->price }}</span>
                                     </div>
                                 </h6>
                                 <p class="about">{{ $product->description }}</p>
