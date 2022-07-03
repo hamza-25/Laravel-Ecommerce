@@ -41,7 +41,7 @@
                             <div class="images p-3">
                                 <div class="text-center p-4"> <img id="main-image"
                                         src="{{ $product->image}}"
-                                        width="250" /> </div>
+                                        width="auto" /> </div>
                             </div>
                         </div>
                         
