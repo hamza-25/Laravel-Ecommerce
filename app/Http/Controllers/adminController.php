@@ -270,4 +270,18 @@ class adminController extends Controller
         $count = count($orders);
         return view("admin.showOrderHasProduct",["orders"=>$orders,"count"=>$count]);
     }
+     public function banUser($id)
+    {
+        $user = user::find($id);
+        $user->banned = 1;
+        $user->save();
+        return redirect()->back()->with(["message"=>"user $user->name ". $user->last_name . "banned "] );
+    }
+    public function recoveryUser($id)
+    {
+        $user = user::find($id);
+        $user->banned = 0;
+        $user->save();
+        return redirect()->back()->with(["message2"=>"user $user->name ". $user->last_name . "recovery "] );
+    }
 }
