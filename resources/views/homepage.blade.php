@@ -183,7 +183,7 @@
         {{ $products->appends(request()->query())->onEachSide(1)->links() }}
     </div>
     </div>
- <footer class="bg-light text-center text-white">
+ <footer class="bg-light text-center text-white fixed-bottom">
            
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                 © 2022 Copyright:
