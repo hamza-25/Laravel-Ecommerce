@@ -183,6 +183,14 @@
         {{ $products->appends(request()->query())->onEachSide(1)->links() }}
     </div>
     </div>
+ <footer class="bg-light text-center text-white">
+           
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2022 Copyright:
+                <a class="text-white" href="https://mdbootstrap.com/">MDB</a>
+            </div>
+        
+        </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
