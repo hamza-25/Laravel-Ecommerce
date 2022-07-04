@@ -98,7 +98,8 @@ class access extends Controller
         $product_id = $request->product;
         $order_id = $request->order;
         $order = order::find($order_id);
-        $product = product::find($product_id);
+        //$product = product::find($product_id);
+        $product = product::withTrashed()->find($product_id);
         return view("clientOrderDetail", ["product" => $product, "order" => $order]);
     }
     public function showDetailOneOrder(Request $request)
